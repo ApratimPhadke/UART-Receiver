@@ -37,6 +37,31 @@ Here’s the simplified logic of how it works:
       └─────────────┘
 ```
 
+<img width="1536" height="1024" alt="block diagram" src="https://github.com/user-attachments/assets/7c55802d-a6f0-4003-926a-1b802c45338f" />
+
+## 🛠️ Schematic 
+<img width="1158" height="768" alt="schematic " src="https://github.com/user-attachments/assets/245d42b5-4727-4e50-84c5-c44d5f8238b8" />
+
+## Detailed Schematic 
+
+
+<img width="1158" height="768" alt="detailed schematic " src="https://github.com/user-attachments/assets/97d98502-fb5f-4ac9-b77b-a6d27f3600d4" />
+
+## DEVICE 
+
+<img width="1570" height="694" alt="synthesis " src="https://github.com/user-attachments/assets/66cbdf9f-0b58-453c-a1a0-967ba47150c2" />
+
+##POWER 
+
+<img width="1854" height="1168" alt="power" src="https://github.com/user-attachments/assets/1bbc34f4-e361-4aae-9e60-c53614509a49" />
+
+##TIMING 
+
+<img width="1854" height="1168" alt="timing" src="https://github.com/user-attachments/assets/cc1db6b6-b4b8-49be-852a-6d615c1271e1" />
+
+##TESTBENCH
+
+<img width="1001" height="812" alt="testbench" src="https://github.com/user-attachments/assets/da628449-22a1-4fd4-a8b5-7cb507f3bd12" />
 
 ---
 
