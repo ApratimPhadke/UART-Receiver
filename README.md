@@ -1,4 +1,3 @@
----
 
 ## 🚀 Project Overview
 
@@ -12,7 +11,6 @@ This project implements the **UART Receiver module**, which:
 * ✅ Outputs the received **parallel 8-bit data** with a **data valid flag**
 * ✅ Provides a **frame error flag** when the stop bit check fails
 
----
 
 ## 🛠️ Block Diagram
 
@@ -39,17 +37,6 @@ Here’s the simplified logic of how it works:
       └─────────────┘
 ```
 
----
-
-## 📂 Repository Structure
-
-```
-📁 UART-Receiver
- ┣ 📄 uart_receiver.v     # Main UART Receiver Verilog code
- ┣ 📄 tb_uart_receiver.v  # Testbench for simulation
- ┣ 📄 README.md           # Documentation (this file)
- ┗ 📄 waveform.png        # Example simulation waveform
-```
 
 ---
 
