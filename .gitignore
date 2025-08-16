@@ -1,0 +1,16 @@
+# Vivado / build artifacts
+*.jou
+*.log
+*.pb
+*.wdb
+*.dcp
+*.str
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+*.Xil/
+.Xil/
+# VS Code
+.vscode/
