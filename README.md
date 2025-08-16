@@ -1,24 +1,66 @@
-🛰️ UART Receiver in Verilog
+---
 
-![UART Block Diagram](A_block_diagram_depicts_a_UART_(Universal_Asynchro.png)
+## 🚀 Project Overview
 
-📌 Project Overview
+UART is a widely used protocol for **serial communication** between digital devices.
+This project implements the **UART Receiver module**, which:
 
-This project implements a UART (Universal Asynchronous Receiver Transmitter) Receiver in Verilog HDL.
-UART is one of the most widely used protocols for serial communication. It allows devices like microcontrollers, sensors, and PCs to communicate using just two wires (TX & RX) without a shared clock.
+* ✅ Listens to the **serial input line (RXD)**
+* ✅ Detects the **start bit**
+* ✅ Samples the incoming **8-bit data** at the correct baud rate
+* ✅ Checks the **stop bit**
+* ✅ Outputs the received **parallel 8-bit data** with a **data valid flag**
+* ✅ Provides a **frame error flag** when the stop bit check fails
 
-This repository demonstrates:
+---
 
-RTL design of a UART Receiver.
+## 🛠️ Block Diagram
 
-Explanation of the working principle.
+Here’s the simplified logic of how it works:
 
-A testbench to simulate the design.
+```
+      ┌─────────────┐
+      │   Start Bit │  → Detect falling edge → Enable sampling
+      └──────┬──────┘
+             │
+             ▼
+      ┌─────────────┐
+      │   Shift Reg │  → Collect 8 bits at baud intervals
+      └──────┬──────┘
+             │
+             ▼
+      ┌─────────────┐
+      │   Stop Bit  │  → Validate frame
+      └──────┬──────┘
+             │
+             ▼
+      ┌─────────────┐
+      │  Data Out   │  → Parallel 8-bit + Data Valid Flag + Error Flag
+      └─────────────┘
+```
 
-⚡ Logic & Working (Simple Explanation)
+---
 
-UART Basics
+## 📂 Repository Structure
 
-UART communication sends data bit by bit (serially).
+```
+📁 UART-Receiver
+ ┣ 📄 uart_receiver.v     # Main UART Receiver Verilog code
+ ┣ 📄 tb_uart_receiver.v  # Testbench for simulation
+ ┣ 📄 README.md           # Documentation (this file)
+ ┗ 📄 waveform.png        # Example simulation waveform
+```
 
-Standard frame format:
+---
+
+## ⚡ How It Works (Simplified)
+
+1. **Idle State**: RX line is high (`1`).
+2. **Start Bit Detection**: When RX goes low, start is detected.
+3. **Bit Sampling**: At every baud interval, the RX line is sampled.
+
+   * Collect **8 data bits** into a register.
+4. **Stop Bit Check**:
+
+   * If stop bit = `1` → Frame valid.
+   * If
